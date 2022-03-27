@@ -15,7 +15,7 @@ import {
   CRow,
 } from "@coreui/react";
 import { AiOutlineUser } from "react-icons/ai";
-import InputPassword from "/home/amaan/Desktop/work/sih/enigma/src/components/form/inputPassword.js";
+import InputPassword from "../../../components/form/inputPassword";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -31,18 +31,18 @@ const Login = () => {
 
   return (
     <div
-      className="c-app c-default-layout flex-row align-items-center hide-text-selection"
+      className="flex-row hide-text-selection"
       style={{
         backgroundImage: `url(${Images.Background})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <CContainer>
-        <CRow className="justify-content-center justify-items-center">
-          <CCol md="8">
-            <CCardGroup>
-              <CCard className="p-4">
+      <CContainer className="" style={{ height: "100vh" }}>
+        <CRow className="justify-content-center">
+          <CCol md="8" className="align-items-center">
+            <CCardGroup style={{ marginTop: "25vh" }}>
+              <CCard className="p-4" style={{ backgroundColor: "#A4C2A8" }}>
                 <CCardBody>
                   <CForm>
                     <h1>Login</h1>
@@ -105,8 +105,8 @@ const Login = () => {
                 </CCardBody>
               </CCard>
               <CCard
-                className="text-white bg-primary py-5 d-md-down-none"
-                style={{ width: "44%" }}
+                className="text-white py-5 d-md-down-none"
+                style={{ width: "44%", backgroundColor: "#5A5A66" }}
               >
                 <CCardBody className="text-center">
                   <div>
