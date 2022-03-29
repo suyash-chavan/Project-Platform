@@ -1,0 +1,21 @@
+name: Backend CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Building App Image
+      run: docker build ./backend/app/ --file Dockerfile --tag app:$(date +%s)
+      
+    - name: Building Mongo Image
+      run: docker build ./backend/mongo/ --file Dockerfile --tag mongo:$(date +%s)
