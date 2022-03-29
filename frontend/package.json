@@ -1,7 +1,9 @@
 {
   "name": "enigma",
+  "homepage": "https://suyash-chavan.github.io/project-platform",
   "version": "0.1.0",
-  "private": true,
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
   "dependencies": {
     "@coreui/coreui": "^4.1.3",
     "@coreui/react": "^4.1.2",
@@ -10,6 +12,7 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.1.3",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-bootstrap": "^2.2.2",
     "react-dom": "^17.0.2",
