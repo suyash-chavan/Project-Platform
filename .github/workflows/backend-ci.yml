@@ -15,7 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Building App Image
-      run: docker build ./backend/app/ --file Dockerfile --tag app:$(date +%s)
+      run: docker build . --file Dockerfile --tag app:$(date +%s)
+      working-directory: backend/app
       
     - name: Building Mongo Image
-      run: docker build ./backend/mongo/ --file Dockerfile --tag mongo:$(date +%s)
+      run: docker build . --file Dockerfile --tag mongo:$(date +%s)
+      working-directory: backend/mongo
