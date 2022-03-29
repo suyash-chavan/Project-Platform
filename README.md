@@ -1,3 +1,3 @@
 # Project-Platform
 
-![CI/CD](https://github.com/suyash-chavan/Project-Platform/workflows/node.js/badge.svg)
+![Frontend-Build](https://github.com/suyash-chavan/Project-Platform/actions/workflows/frontend-build.yml/badge.svg)
